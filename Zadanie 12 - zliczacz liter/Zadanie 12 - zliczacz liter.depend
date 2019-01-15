@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1547561873 source:c:\users\nathakis\documents\programy\zadaniaspoj\zadanie 12 - zliczacz liter\main.cpp
+	<iostream>
+	<cstring>
+
