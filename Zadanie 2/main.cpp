@@ -1,18 +1,3 @@
-#include <iostream>
-
-using namespace std;
-
-int liczba_przypadkow;
-
-int main()
-{
-    cin>>liczba_przypadkow;
-    cout<<"hello";
-    if(liczba_przypadkow)
-
-
-    return 0;
-}
 /*
 FCTRL3 - Dwie cyfry silni
 Zadanie: Silnia
@@ -42,3 +27,46 @@ poprawną odpowiedzią jest:
 0 1
 2 4
 */
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int liczba_przypadkow;
+int *silnia;
+int wynik=1;
+
+int silnia_funkcja (int n)
+{
+    wynik=1;
+    if (n==0) return 1;
+    while (n > 0)
+    {
+     wynik*= n;
+    n--;
+    }
+    return wynik;
+    //else return n*silnia_funkcja(n-1);
+}
+void jednostki_i_dziesiatki (int j)
+{
+    cout<<(j/10)%10<<" "<<j%10<<endl;
+}
+int main()
+{
+    cin>>liczba_przypadkow;
+    int silnia_liczba[liczba_przypadkow];
+    if(liczba_przypadkow<1&&liczba_przypadkow>30)
+    {
+        return 0;
+    }
+    silnia = new int [liczba_przypadkow-1];
+    for(int i=0;i<liczba_przypadkow;i++)
+    {
+        cin>>silnia[i];
+        silnia_liczba[i]=silnia_funkcja(silnia[i]);
+        jednostki_i_dziesiatki(silnia_liczba[i]);
+    }
+    return 0;
+}
