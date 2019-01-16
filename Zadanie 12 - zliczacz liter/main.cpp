@@ -41,18 +41,18 @@ O 1
 
 using namespace std;
 string *slowo;
-int rozmiar_tablicy;
+int liczba_slow;
+int a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,i=0,j=0,k=0,l=0,m=0,n=0,o=0,p=0,r=0,s=0,t=0,u=0,w=0,z=0;
+int Da=0,Db=0,Dc=0,De=0,Df=0,Dg=0,Dh=0,Di=0,Dj=0,Dk=0,Dl=0,Dm=0,Dn=0,Do=0,Dp=0,Dr=0,Ds=0,Dt=0,Du=0,Dw=0,Dz=0;
 int main()
 {
-cin>>rozmiar_tablicy;
-slowo = new string [rozmiar_tablicy];
-for(int i=0;i<rozmiar_tablicy;i++)
-{
-    cin>>slowo[i];
-}
-for(int j=0;j<rozmiar_tablicy;j++)
-{
-    cout<<slowo[j]<<endl;
-}
+    cin>>liczba_slow;
+    slowo = new string [liczba_slow];
+    for(int i=0;i<liczba_slow;i++)
+    {
+        getline(cin,slowo[i]);
+    }
+
+    delete[] slowo;
     return 0;
 }
